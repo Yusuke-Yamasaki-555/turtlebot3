@@ -4,8 +4,12 @@ Panels:
     Name: Displays
     Property Tree Widget:
       Expanded:
+        - /Global Options1
+        - /Status1
         - /Grid1
+        - /Grid1/Status1
         - /RobotModel1
+        - /RobotModel1/Status1
         - /RobotModel1/Links1
         - /RobotModel1/Links1/base_link1
         - /RobotModel1/Links1/base_link1/Position1
@@ -61,7 +65,7 @@ Visualization Manager:
         Z: 0
       Plane: XY
       Plane Cell Count: 20
-      Reference Frame: map
+      Reference Frame: tel_robot/map
       Value: true
     - Alpha: 1
       Class: rviz/RobotModel
@@ -108,7 +112,7 @@ Visualization Manager:
           Value: true
       Name: RobotModel
       Robot Description: robot_description
-      TF Prefix: ""
+      TF Prefix: tel_robot
       Update Interval: 0
       Value: true
       Visual Enabled: true
@@ -119,26 +123,26 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: false
-        base_footprint:
-          Value: true
-        base_link:
-          Value: false
-        base_scan:
-          Value: false
-        caster_back_link:
-          Value: false
         head_camera:
           Value: true
-        imu_link:
-          Value: false
-        map:
-          Value: false
-        odom:
-          Value: false
-        wheel_left_link:
-          Value: false
-        wheel_right_link:
-          Value: false
+        tel_robot/base_footprint:
+          Value: true
+        tel_robot/base_link:
+          Value: true
+        tel_robot/base_scan:
+          Value: true
+        tel_robot/caster_back_link:
+          Value: true
+        tel_robot/imu_link:
+          Value: true
+        tel_robot/map:
+          Value: true
+        tel_robot/odom:
+          Value: true
+        tel_robot/wheel_left_link:
+          Value: true
+        tel_robot/wheel_right_link:
+          Value: true
       Marker Alpha: 1
       Marker Scale: 1
       Name: TF
@@ -146,22 +150,22 @@ Visualization Manager:
       Show Axes: true
       Show Names: false
       Tree:
-        map:
-          odom:
-            base_footprint:
-              base_link:
-                base_scan:
-                  {}
-                caster_back_link:
-                  {}
-                imu_link:
-                  {}
-                wheel_left_link:
-                  {}
-                wheel_right_link:
-                  {}
+        tel_robot/map:
+          tel_robot/odom:
+            tel_robot/base_footprint:
               head_camera:
                 {}
+              tel_robot/base_link:
+                tel_robot/base_scan:
+                  {}
+                tel_robot/caster_back_link:
+                  {}
+                tel_robot/imu_link:
+                  {}
+                tel_robot/wheel_left_link:
+                  {}
+                tel_robot/wheel_right_link:
+                  {}
       Update Interval: 0
       Value: true
     - Alpha: 1
@@ -378,7 +382,7 @@ Visualization Manager:
   Global Options:
     Background Color: 48; 48; 48
     Default Light: true
-    Fixed Frame: map
+    Fixed Frame: tel_robot/map
     Frame Rate: 30
   Name: root
   Tools:
